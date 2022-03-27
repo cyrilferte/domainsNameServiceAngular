@@ -1,0 +1,53 @@
+.center-main-container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  background: #9796f0; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #9796f0, #fbc7d4); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #9796f0, #fbc7d4);
+  text-align: center;
+  .hero-container{
+    margin-top: 10%;
+    h1{
+      font-size: xxx-large;
+      font-weight: bold;
+    }
+  }
+  .form-container{
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    .form-field-container{
+      position: relative;
+      .unit-input{
+        position: absolute;
+        right: 0;
+      }
+    }
+
+  }
+
+}
+.chip-network{
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+
+.table-container{
+  width: 50%;
+  table, td, th {
+    border: 1px solid;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+}
