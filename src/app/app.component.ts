@@ -92,6 +92,7 @@ export class AppComponent {
         let tx = await contract['register'](this.domain, {value: utils.parseEther(price)});
         // Wait for the transaction to be mined
         const receipt = await tx.wait();
+        await this.fetchMints()
 
         // Check if the transaction was successfully completed
         if (receipt.status === 1) {
@@ -102,7 +103,7 @@ export class AppComponent {
           await tx.wait();
 
           console.log("Record set! https://mumbai.polygonscan.com/tx/" + tx.hash);
-
+          await this.fetchMints()
         } else {
           alert("Transaction failed! Please try again");
         }
